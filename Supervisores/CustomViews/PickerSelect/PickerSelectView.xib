@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerSelectView" customModule="Supervisores" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAccept" destination="Bxi-1v-rkx" id="Df9-1o-QSF"/>
+                <outlet property="btnCancel" destination="1r0-H5-cuO" id="1Xh-fe-Qei"/>
+                <outlet property="lblTitle" destination="4bP-jA-HsP" id="64A-wE-jjt"/>
+                <outlet property="pickerV" destination="hQr-xM-rq5" id="QDq-9o-QpI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PickerSelectView" customModule="Supervisores" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzU-Mz-jIY">
+                    <rect key="frame" x="27.5" y="208.5" width="320" height="250"/>
+                    <subviews>
+                        <pickerView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQr-xM-rq5">
+                            <rect key="frame" x="0.0" y="35" width="320" height="215"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="M5q-FI-jF0"/>
+                                <outlet property="delegate" destination="-1" id="xzZ-Yd-7Cl"/>
+                            </connections>
+                        </pickerView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona una opción" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bP-jA-HsP">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                            <color key="backgroundColor" red="0.43675846658748613" green="0.57135528006360536" blue="0.6431144754" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="pP6-rQ-do4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="4Ys-ad-IT7"/>
+                        <constraint firstItem="hQr-xM-rq5" firstAttribute="leading" secondItem="yzU-Mz-jIY" secondAttribute="leading" id="8LJ-ec-o9Z"/>
+                        <constraint firstItem="hQr-xM-rq5" firstAttribute="top" secondItem="4bP-jA-HsP" secondAttribute="bottom" id="Ctg-DP-ovB"/>
+                        <constraint firstAttribute="trailing" secondItem="4bP-jA-HsP" secondAttribute="trailing" id="FF8-14-H8R"/>
+                        <constraint firstAttribute="trailing" secondItem="hQr-xM-rq5" secondAttribute="trailing" id="JdV-7y-9xE"/>
+                        <constraint firstAttribute="bottom" secondItem="hQr-xM-rq5" secondAttribute="bottom" id="M0H-np-gNt"/>
+                        <constraint firstItem="4bP-jA-HsP" firstAttribute="leading" secondItem="yzU-Mz-jIY" secondAttribute="leading" id="Wly-Zr-WLO"/>
+                        <constraint firstAttribute="width" constant="320" id="nrM-bl-g2K"/>
+                        <constraint firstItem="4bP-jA-HsP" firstAttribute="top" secondItem="yzU-Mz-jIY" secondAttribute="top" id="zlI-jJ-498"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D6f-r7-l7u">
+                    <rect key="frame" x="15" y="597" width="345" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r0-H5-cuO">
+                            <rect key="frame" x="0.0" y="0.0" width="167.5" height="50"/>
+                            <color key="backgroundColor" red="1" green="0.35291814999999999" blue="0.28150618710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <state key="normal" title="Cancelar">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelOption:" destination="-1" eventType="touchUpInside" id="fYM-A9-9Ef"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxi-1v-rkx">
+                            <rect key="frame" x="177.5" y="0.0" width="167.5" height="50"/>
+                            <color key="backgroundColor" red="0.22260829947895389" green="0.21724819408244525" blue="0.65984457731246948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <state key="normal" title="Aceptar">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="chooseOption:" destination="-1" eventType="touchUpInside" id="rtO-be-0uh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="thr-1C-Lji"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D6f-r7-l7u" secondAttribute="trailing" constant="15" id="00k-xc-Xht"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="D6f-r7-l7u" secondAttribute="bottom" constant="20" id="HYe-mo-1a8"/>
+                <constraint firstItem="yzU-Mz-jIY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Uv5-j6-BfH"/>
+                <constraint firstItem="yzU-Mz-jIY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pWP-fV-jey"/>
+                <constraint firstItem="D6f-r7-l7u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="vTE-aS-bJo"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="136.80000000000001" y="121.88905547226388"/>
+        </view>
+    </objects>
+</document>

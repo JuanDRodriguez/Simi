@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="Supervisores" customModuleProvider="target">
+            <connections>
+                <outlet property="captureButton" destination="h9e-Y6-xBb" id="iEX-QC-d3U"/>
+                <outlet property="previewView" destination="bBr-l2-qUE" id="GLM-8G-eMU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBr-l2-qUE">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9e-Y6-xBb">
+                    <rect key="frame" x="182" y="792" width="50" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Owk-If-MMq"/>
+                        <constraint firstAttribute="height" constant="50" id="Wd9-W8-DJ8"/>
+                    </constraints>
+                    <connections>
+                        <action selector="didPressTakePhotoWithSender:" destination="-1" eventType="touchUpInside" id="Gmg-ZN-tGS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bBr-l2-qUE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="CVw-mk-OP5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="h9e-Y6-xBb" secondAttribute="bottom" constant="20" id="NGu-g1-zlH"/>
+                <constraint firstItem="bBr-l2-qUE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="S0g-J0-seq"/>
+                <constraint firstItem="h9e-Y6-xBb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dl4-q3-Crn"/>
+                <constraint firstAttribute="bottom" secondItem="bBr-l2-qUE" secondAttribute="bottom" id="k5P-s1-7zP"/>
+                <constraint firstItem="bBr-l2-qUE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zMf-HY-IIc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="128.98550724637681" y="35.491071428571423"/>
+        </view>
+    </objects>
+</document>

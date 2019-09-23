@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E227" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BreachStored" representedClassName="BreachStored" syncable="YES" codeGenerationType="class">
+        <attribute name="breach" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OptionStored" inverseName="breaches" inverseEntity="OptionStored" syncable="YES"/>
+    </entity>
+    <entity name="Encuestas" representedClassName="Encuestas" syncable="YES" codeGenerationType="class">
+        <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateEnd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinatario" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idEncuesta" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="instrucciones" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MailStored" representedClassName="MailStored" syncable="YES" codeGenerationType="class">
+        <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OptionStored" inverseName="mails" inverseEntity="OptionStored" syncable="YES"/>
+    </entity>
+    <entity name="Mensajes" representedClassName="Mensajes" syncable="YES" codeGenerationType="class">
+        <attribute name="asunto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fechaRegistro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idMensaje" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mensaje" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ModuleStored" representedClassName="ModuleStored" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateChange" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateRegister" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numberQuestions" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="QuestionStored" inverseName="module" inverseEntity="QuestionStored" syncable="YES"/>
+    </entity>
+    <entity name="Notas" representedClassName="Notas" syncable="YES" codeGenerationType="class">
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idNota" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="idUnit" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OptionStored" representedClassName="OptionStored" syncable="YES" codeGenerationType="class">
+        <attribute name="breach" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateSolution" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="levelBreach" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mail" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="option" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="subOption" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weighing" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="breaches" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BreachStored" inverseName="option" inverseEntity="BreachStored" syncable="YES"/>
+        <relationship name="mails" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MailStored" inverseName="option" inverseEntity="MailStored" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QuestionStored" inverseName="options" inverseEntity="QuestionStored" syncable="YES"/>
+        <relationship name="suboptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ResponseSuboption" inverseName="option" inverseEntity="ResponseSuboption" syncable="YES"/>
+    </entity>
+    <entity name="Perfil" representedClassName="Perfil" syncable="YES" codeGenerationType="class">
+        <attribute name="currentProfile" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastProfile" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="QuestionStored" representedClassName="QuestionStored" syncable="YES" codeGenerationType="class">
+        <attribute name="action" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="commentForced" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateSolution" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isVisible" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="legend" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moduleId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="photoForced" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionTypeId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="topicId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="module" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ModuleStored" inverseName="questions" inverseEntity="ModuleStored" syncable="YES"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="OptionStored" inverseName="question" inverseEntity="OptionStored" syncable="YES"/>
+    </entity>
+    <entity name="ResponseBreach" representedClassName="ResponseBreach" syncable="YES" codeGenerationType="class">
+        <attribute name="dateSolution" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isEditing" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="levelBreach" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="levelBreachId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseOption" inverseName="breaches" inverseEntity="ResponseOption" syncable="YES"/>
+    </entity>
+    <entity name="ResponseModule" representedClassName="ResponseModule" syncable="YES" codeGenerationType="class">
+        <attribute name="currentQuestion" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="percentFinish" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ResponseQuestion" inverseName="module" inverseEntity="ResponseQuestion" syncable="YES"/>
+        <relationship name="supervision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseSupervision" inverseName="modules" inverseEntity="ResponseSupervision" syncable="YES"/>
+    </entity>
+    <entity name="ResponseOption" representedClassName="ResponseOption" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="idQuestion" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isEditing" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="breaches" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ResponseBreach" inverseName="option" inverseEntity="ResponseBreach" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseQuestion" inverseName="options" inverseEntity="ResponseQuestion" syncable="YES"/>
+    </entity>
+    <entity name="ResponsePause" representedClassName="ResponsePause" syncable="YES" codeGenerationType="class">
+        <attribute name="dateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateStart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="reasonDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reasonId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="supervision" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseSupervision" inverseName="pauses" inverseEntity="ResponseSupervision" syncable="YES"/>
+    </entity>
+    <entity name="ResponsePhoto" representedClassName="ResponsePhoto" syncable="YES" codeGenerationType="class">
+        <attribute name="idQuestion" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isEditing" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseQuestion" inverseName="photos" inverseEntity="ResponseQuestion" syncable="YES"/>
+    </entity>
+    <entity name="ResponseQuestion" representedClassName="ResponseQuestion" syncable="YES" codeGenerationType="class">
+        <attribute name="action" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="breachFinish" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateSolutionCommon" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hasBreach" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="idAction" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isEditing" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="module" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseModule" inverseName="questions" inverseEntity="ResponseModule" syncable="YES"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ResponseOption" inverseName="question" inverseEntity="ResponseOption" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ResponsePhoto" inverseName="question" inverseEntity="ResponsePhoto" syncable="YES"/>
+    </entity>
+    <entity name="ResponseSuboption" representedClassName="ResponseSuboption" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="answerSuboption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionSuboption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isEditing" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="suboptionId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OptionStored" inverseName="suboptions" inverseEntity="OptionStored" syncable="YES"/>
+    </entity>
+    <entity name="ResponseSupervision" representedClassName="ResponseSupervision" syncable="YES" codeGenerationType="class">
+        <attribute name="complete" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateStart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="domainAccount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idUnit" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nameSupervisor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="statusUnit" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="supervisorKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="modules" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ResponseModule" inverseName="supervision" inverseEntity="ResponseModule" syncable="YES"/>
+        <relationship name="pauses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ResponsePause" inverseName="supervision" inverseEntity="ResponsePause" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BreachStored" positionX="0" positionY="171" width="128" height="90"/>
+        <element name="Encuestas" positionX="-18" positionY="135" width="128" height="135"/>
+        <element name="MailStored" positionX="9" positionY="162" width="128" height="75"/>
+        <element name="Mensajes" positionX="-18" positionY="135" width="128" height="105"/>
+        <element name="ModuleStored" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="Notas" positionX="-18" positionY="135" width="128" height="105"/>
+        <element name="OptionStored" positionX="-18" positionY="162" width="128" height="240"/>
+        <element name="Perfil" positionX="-9" positionY="144" width="128" height="75"/>
+        <element name="QuestionStored" positionX="-45" positionY="90" width="128" height="330"/>
+        <element name="ResponseBreach" positionX="18" positionY="180" width="128" height="150"/>
+        <element name="ResponseModule" positionX="-9" positionY="144" width="128" height="120"/>
+        <element name="ResponseOption" positionX="0" positionY="153" width="128" height="135"/>
+        <element name="ResponsePause" positionX="9" positionY="162" width="128" height="120"/>
+        <element name="ResponsePhoto" positionX="27" positionY="189" width="128" height="120"/>
+        <element name="ResponseQuestion" positionX="-36" positionY="153" width="128" height="210"/>
+        <element name="ResponseSuboption" positionX="0" positionY="153" width="128" height="150"/>
+        <element name="ResponseSupervision" positionX="-18" positionY="135" width="128" height="210"/>
+    </elements>
+</model>

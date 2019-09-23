@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotosView" customModule="Supervisores" customModuleProvider="target">
+            <connections>
+                <outlet property="btnGallery" destination="dy0-nA-PUo" id="IbM-gT-vxT"/>
+                <outlet property="btnPhoto" destination="rRi-w2-RLx" id="kpd-6c-Bfk"/>
+                <outlet property="lblTitle" destination="TuA-F7-oMa" id="OHk-H6-cz8"/>
+                <outlet property="photo1" destination="KlJ-m9-a17" id="ebX-P2-rCf"/>
+                <outlet property="photo2" destination="nNj-47-7O1" id="0J1-rv-BtC"/>
+                <outlet property="photo3" destination="ax4-cK-fEp" id="aS0-NH-WTi"/>
+                <outlet property="photo4" destination="FTF-Gw-4vn" id="4Ca-Z4-rAC"/>
+                <outlet property="photo5" destination="g23-Oc-9yU" id="BGj-Jb-MjC"/>
+                <outlet property="stackViewPhotos" destination="Kvm-9D-ZgA" id="VlJ-rB-9Vb"/>
+                <outlet property="viewImgOptions" destination="P1b-gs-uAR" id="Bra-mK-7iF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PhotosView" customModule="Supervisores" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evidencia fotográfica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuA-F7-oMa">
+                    <rect key="frame" x="2" y="2" width="375" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="fao-ad-pdk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kvm-9D-ZgA">
+                    <rect key="frame" x="0.0" y="24" width="375" height="66"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlJ-m9-a17">
+                            <rect key="frame" x="0.0" y="0.0" width="71" height="66"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="addPhoto"/>
+                            <connections>
+                                <action selector="addPhoto:" destination="-1" eventType="touchUpInside" id="QDo-fe-BqU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNj-47-7O1">
+                            <rect key="frame" x="76" y="0.0" width="71" height="66"/>
+                            <state key="normal" image="addPhoto"/>
+                            <connections>
+                                <action selector="addPhoto:" destination="-1" eventType="touchUpInside" id="hTg-mv-a5o"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ax4-cK-fEp">
+                            <rect key="frame" x="152" y="0.0" width="71" height="66"/>
+                            <state key="normal" image="addPhoto"/>
+                            <connections>
+                                <action selector="addPhoto:" destination="-1" eventType="touchUpInside" id="mh8-9R-iRV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTF-Gw-4vn">
+                            <rect key="frame" x="228" y="0.0" width="71" height="66"/>
+                            <state key="normal" image="addPhoto"/>
+                            <connections>
+                                <action selector="addPhoto:" destination="-1" eventType="touchUpInside" id="jKc-0K-dCi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g23-Oc-9yU">
+                            <rect key="frame" x="304" y="0.0" width="71" height="66"/>
+                            <state key="normal" image="addPhoto"/>
+                            <connections>
+                                <action selector="addPhoto:" destination="-1" eventType="touchUpInside" id="sDS-u2-0cH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" red="0.041681021149999997" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1b-gs-uAR">
+                    <rect key="frame" x="0.0" y="24" width="375" height="66"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ip3-lj-CTD">
+                            <rect key="frame" x="5" y="0.0" width="365" height="66"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy0-nA-PUo">
+                                    <rect key="frame" x="0.0" y="0.0" width="177.5" height="66"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="galleryIcon"/>
+                                    <connections>
+                                        <action selector="imgFromGallery:" destination="-1" eventType="touchUpInside" id="aN3-aw-Syv"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRi-w2-RLx">
+                                    <rect key="frame" x="187.5" y="0.0" width="177.5" height="66"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="photoIcon"/>
+                                    <connections>
+                                        <action selector="imgFromPhoto:" destination="-1" eventType="touchUpInside" id="Szd-dX-Yby"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ip3-lj-CTD" firstAttribute="leading" secondItem="P1b-gs-uAR" secondAttribute="leading" constant="5" id="3Si-Aw-cHD"/>
+                        <constraint firstItem="ip3-lj-CTD" firstAttribute="top" secondItem="P1b-gs-uAR" secondAttribute="top" id="AEv-L9-6nt"/>
+                        <constraint firstAttribute="trailing" secondItem="ip3-lj-CTD" secondAttribute="trailing" constant="5" id="Tyo-WI-qIZ"/>
+                        <constraint firstAttribute="bottom" secondItem="ip3-lj-CTD" secondAttribute="bottom" id="izn-gr-Y8H"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="P1b-gs-uAR" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="A0G-mM-jxC"/>
+                <constraint firstItem="Kvm-9D-ZgA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ezf-Qm-6eD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P1b-gs-uAR" secondAttribute="trailing" id="LTd-u9-JRD"/>
+                <constraint firstItem="TuA-F7-oMa" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="2" id="OSM-Gh-8pD"/>
+                <constraint firstItem="TuA-F7-oMa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="2" id="W7r-TF-Hoh"/>
+                <constraint firstItem="Kvm-9D-ZgA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="a3D-n3-V27"/>
+                <constraint firstAttribute="bottom" secondItem="Kvm-9D-ZgA" secondAttribute="bottom" id="bJI-Kr-EzE"/>
+                <constraint firstItem="P1b-gs-uAR" firstAttribute="top" secondItem="TuA-F7-oMa" secondAttribute="bottom" constant="2" id="guq-Rw-3DV"/>
+                <constraint firstItem="Kvm-9D-ZgA" firstAttribute="top" secondItem="TuA-F7-oMa" secondAttribute="bottom" constant="2" id="h2z-Ln-oB6"/>
+                <constraint firstItem="Kvm-9D-ZgA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="k7r-Fu-2SM"/>
+                <constraint firstItem="Kvm-9D-ZgA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lQM-gz-7f3"/>
+                <constraint firstItem="P1b-gs-uAR" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="p06-Ae-MYP"/>
+                <constraint firstItem="Kvm-9D-ZgA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uSr-cm-q8k"/>
+                <constraint firstItem="P1b-gs-uAR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vVW-8U-KVC"/>
+                <constraint firstItem="TuA-F7-oMa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="2" id="xgT-2b-SLU"/>
+                <constraint firstItem="P1b-gs-uAR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yPc-1y-Izs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="P1b-gs-uAR" secondAttribute="bottom" id="ycl-t2-Yu3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="130.40000000000001" y="182.60869565217394"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addPhoto" width="100" height="100"/>
+        <image name="galleryIcon" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="photoIcon" width="133.33332824707031" height="133.33332824707031"/>
+    </resources>
+</document>

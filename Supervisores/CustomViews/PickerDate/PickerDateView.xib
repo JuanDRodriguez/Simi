@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerDateView" customModule="Supervisores" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDone" destination="weT-ax-CA5" id="3MG-Vm-H3r"/>
+                <outlet property="lblTitle" destination="2s2-Zh-Ye5" id="o49-Gg-Unv"/>
+                <outlet property="pickerDate" destination="0AO-Vs-9a0" id="mht-3C-HVw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PickerDateView" customModule="Supervisores" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeD-iZ-9pz">
+                    <rect key="frame" x="28" y="208" width="319" height="251"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona una fecha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s2-Zh-Ye5">
+                            <rect key="frame" x="0.0" y="0.0" width="319" height="35"/>
+                            <color key="backgroundColor" red="0.43675846660000001" green="0.57135528010000003" blue="0.6431144754" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="1b8-Cz-DQr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0AO-Vs-9a0">
+                            <rect key="frame" x="0.0" y="35" width="319" height="216"/>
+                            <date key="date" timeIntervalSinceReferenceDate="572291805.18754804">
+                                <!--2019-02-19 17:56:45 +0000-->
+                            </date>
+                            <locale key="locale" localeIdentifier="es_MX"/>
+                            <connections>
+                                <action selector="newDate:" destination="-1" eventType="valueChanged" id="V7R-Hd-Hlg"/>
+                            </connections>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0AO-Vs-9a0" secondAttribute="trailing" id="68M-gQ-Cav"/>
+                        <constraint firstAttribute="bottom" secondItem="0AO-Vs-9a0" secondAttribute="bottom" id="SjV-nG-4zy"/>
+                        <constraint firstItem="0AO-Vs-9a0" firstAttribute="leading" secondItem="AeD-iZ-9pz" secondAttribute="leading" id="X5P-lT-k5f"/>
+                        <constraint firstItem="0AO-Vs-9a0" firstAttribute="top" secondItem="2s2-Zh-Ye5" secondAttribute="bottom" id="YgL-zP-TjT"/>
+                        <constraint firstItem="2s2-Zh-Ye5" firstAttribute="top" secondItem="AeD-iZ-9pz" secondAttribute="top" id="aT4-tO-9qL"/>
+                        <constraint firstAttribute="trailing" secondItem="2s2-Zh-Ye5" secondAttribute="trailing" id="lCG-3r-I1p"/>
+                        <constraint firstAttribute="width" constant="319" id="pQt-zb-ZcR"/>
+                        <constraint firstItem="2s2-Zh-Ye5" firstAttribute="leading" secondItem="AeD-iZ-9pz" secondAttribute="leading" id="ukb-PU-ezY"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weT-ax-CA5">
+                    <rect key="frame" x="107" y="597" width="161" height="50"/>
+                    <color key="backgroundColor" red="0.2226082995" green="0.21724819410000001" blue="0.65984457730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="hKg-UG-w51"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="Aceptar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="chooseDate:" destination="-1" eventType="touchUpInside" id="TI0-X0-HJm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="weT-ax-CA5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="107" id="2SD-26-k7W"/>
+                <constraint firstItem="AeD-iZ-9pz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="D9Q-SD-Ln3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="weT-ax-CA5" secondAttribute="trailing" constant="107" id="e6j-F0-JZd"/>
+                <constraint firstItem="AeD-iZ-9pz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="iV0-eu-PSF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="weT-ax-CA5" secondAttribute="bottom" constant="20" id="rBo-oP-FMf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="136.80000000000001" y="110.19490254872565"/>
+        </view>
+    </objects>
+</document>

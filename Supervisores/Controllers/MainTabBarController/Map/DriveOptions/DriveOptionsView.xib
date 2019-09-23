@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DriveOptionsView" customModule="Supervisores" customModuleProvider="target">
+            <connections>
+                <outlet property="btnGoogleMaps" destination="kmd-xv-z1V" id="2sT-f5-viG"/>
+                <outlet property="btnMaps" destination="eX8-N0-XNu" id="Eez-ek-ToP"/>
+                <outlet property="btnWaze" destination="3LP-tG-goo" id="vcz-v8-kpS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="DriveOptionsView" customModule="Supervisores" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6ib-J0-KPg">
+                    <rect key="frame" x="15" y="75" width="290" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX8-N0-XNu">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="maps-iOS"/>
+                            <connections>
+                                <action selector="openMaps:" destination="-1" eventType="touchUpInside" id="LTt-6K-ThN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmd-xv-z1V">
+                            <rect key="frame" x="110" y="0.0" width="70" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="googleMaps"/>
+                            <connections>
+                                <action selector="openGoogleMaps:" destination="-1" eventType="touchUpInside" id="oko-yH-HdM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LP-tG-goo">
+                            <rect key="frame" x="220" y="0.0" width="70" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="waze-icon"/>
+                            <connections>
+                                <action selector="openWaze:" destination="-1" eventType="touchUpInside" id="nJQ-ff-ifl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.35291814999999999" blue="0.28150618710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="D82-oI-bfi"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona el mapa de tu preferencia:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGQ-c7-AS3">
+                    <rect key="frame" x="15" y="40" width="290" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="k9C-rC-L6v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfV-xV-zOz">
+                    <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fNO-rU-jaJ"/>
+                        <constraint firstAttribute="width" constant="44" id="zb3-ON-F2M"/>
+                    </constraints>
+                    <state key="normal" image="close"/>
+                    <connections>
+                        <action selector="closeModal:" destination="-1" eventType="touchUpInside" id="A03-dK-XlM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.601837588028169" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6ib-J0-KPg" firstAttribute="top" secondItem="rGQ-c7-AS3" secondAttribute="bottom" constant="8" id="C6a-1S-qCs"/>
+                <constraint firstItem="AfV-xV-zOz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ET0-Ud-Hwd"/>
+                <constraint firstItem="6ib-J0-KPg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="I3q-lc-grl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6ib-J0-KPg" secondAttribute="bottom" constant="15" id="O0R-Pr-l9Y"/>
+                <constraint firstItem="AfV-xV-zOz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="RCs-oe-lpp"/>
+                <constraint firstItem="rGQ-c7-AS3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="ai6-CZ-EZ3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rGQ-c7-AS3" secondAttribute="trailing" constant="15" id="cvJ-BN-Ljs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6ib-J0-KPg" secondAttribute="trailing" constant="15" id="dfO-wT-6Fn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="21" y="311"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="40" height="40"/>
+        <image name="googleMaps" width="102" height="101"/>
+        <image name="maps-iOS" width="85" height="85"/>
+        <image name="waze-icon" width="86" height="86"/>
+    </resources>
+</document>

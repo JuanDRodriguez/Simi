@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OderIndicatorPopUp" customModule="Supervisores" customModuleProvider="target">
+            <connections>
+                <outlet property="content" destination="IpC-01-bJQ" id="msQ-hi-KSM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpC-01-bJQ">
+                    <rect key="frame" x="139" y="138" width="200" height="100"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WEt-Oq-qE9">
+                            <rect key="frame" x="9" y="0.0" width="191" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzb-Yp-4in">
+                                    <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <state key="normal" title="Nombre">
+                                        <color key="titleColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionWithButton:" destination="-1" eventType="touchUpInside" id="1Kt-rd-F2e"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="un8-Zv-vub">
+                                    <rect key="frame" x="0.0" y="50" width="191" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <state key="normal" title="Incremento Año vs Año">
+                                        <color key="titleColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionWithButton:" destination="-1" eventType="touchUpInside" id="VtF-pR-3Qh"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="zzb-Yp-4in" firstAttribute="width" secondItem="WEt-Oq-qE9" secondAttribute="width" id="8St-8m-pgj"/>
+                                <constraint firstItem="zzb-Yp-4in" firstAttribute="height" secondItem="WEt-Oq-qE9" secondAttribute="height" multiplier="0.5" id="ewW-Ar-dJA"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="WEt-Oq-qE9" firstAttribute="leading" secondItem="IpC-01-bJQ" secondAttribute="leading" constant="9" id="Hsf-Ud-Vqr"/>
+                        <constraint firstAttribute="trailing" secondItem="WEt-Oq-qE9" secondAttribute="trailing" id="ScH-59-7lm"/>
+                        <constraint firstAttribute="bottom" secondItem="WEt-Oq-qE9" secondAttribute="bottom" id="jIs-UU-uYV"/>
+                        <constraint firstAttribute="height" constant="100" id="l5m-fQ-7yi"/>
+                        <constraint firstAttribute="width" constant="200" id="oOp-7W-qbI"/>
+                        <constraint firstItem="WEt-Oq-qE9" firstAttribute="top" secondItem="IpC-01-bJQ" secondAttribute="top" id="pKS-BR-nsR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="IpC-01-bJQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="139" id="6Au-m4-aXA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IpC-01-bJQ" secondAttribute="trailing" constant="75" id="aXl-jz-sUu"/>
+                <constraint firstItem="IpC-01-bJQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="94" id="iVd-3A-jkP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="134.78260869565219" y="120.53571428571428"/>
+        </view>
+    </objects>
+</document>

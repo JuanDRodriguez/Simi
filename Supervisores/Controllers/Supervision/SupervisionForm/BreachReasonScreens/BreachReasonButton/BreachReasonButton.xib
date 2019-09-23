@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BreachReasonButton" customModule="Supervisores" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="rxc-To-0YF" id="108-rh-mB5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BreachReasonButton" customModule="Supervisores" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxc-To-0YF">
+                    <rect key="frame" x="325" y="0.0" width="50" height="59"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="5oD-2n-rfS"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivos de incumplimiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDq-bh-AXV">
+                    <rect key="frame" x="3" y="0.0" width="319" height="59"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUp-IQ-abn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                    <connections>
+                        <action selector="goToBreachReason:" destination="-1" eventType="touchUpInside" id="o9Z-zI-5Ry"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rxc-To-0YF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="6Ln-HJ-JQT"/>
+                <constraint firstItem="lUp-IQ-abn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="AZK-FD-M6q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QDq-bh-AXV" secondAttribute="bottom" id="HWf-V4-QO0"/>
+                <constraint firstItem="QDq-bh-AXV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="3" id="PEp-vo-k8s"/>
+                <constraint firstItem="lUp-IQ-abn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dsv-lS-9GK"/>
+                <constraint firstItem="QDq-bh-AXV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="j2O-n8-KKY"/>
+                <constraint firstItem="lUp-IQ-abn" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="k4w-HW-JFM"/>
+                <constraint firstItem="rxc-To-0YF" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="m8n-L0-vQo"/>
+                <constraint firstItem="rxc-To-0YF" firstAttribute="leading" secondItem="QDq-bh-AXV" secondAttribute="trailing" constant="3" id="nwQ-TS-hSM"/>
+                <constraint firstItem="lUp-IQ-abn" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="p5A-P6-DdA"/>
+                <constraint firstItem="rxc-To-0YF" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="tev-NH-APQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="139.880059970015"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SupervisionListFormViewController" customModule="Supervisores" customModuleProvider="target">
+            <connections>
+                <outlet property="lblNumberChanges" destination="g2z-2D-EwP" id="kbt-wW-je8"/>
+                <outlet property="navBar" destination="6q7-Bx-EVf" id="jYl-Dx-0TO"/>
+                <outlet property="questionsView" destination="qNQ-el-2EE" id="Emo-Nz-1WI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6q7-Bx-EVf">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="y2U-4S-Mx1"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNQ-el-2EE">
+                    <rect key="frame" x="5" y="69" width="365" height="593"/>
+                    <color key="backgroundColor" red="0.69758273637006574" green="0.78352003498198564" blue="1" alpha="0.228790713028169" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="YY3-Kh-Olh" appends="YES" id="aSt-JM-Bx6"/>
+                    </connections>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2z-2D-EwP">
+                    <rect key="frame" x="326" y="69" width="44" height="44"/>
+                    <color key="backgroundColor" red="0.066620089110000003" green="0.39738225939999999" blue="0.78795868160000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="3Ag-q2-V6A"/>
+                        <constraint firstAttribute="height" constant="44" id="ahI-hD-1d2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6q7-Bx-EVf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1i1-Sy-vQ6"/>
+                <constraint firstItem="qNQ-el-2EE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="6T4-Ws-Vax"/>
+                <constraint firstAttribute="trailing" secondItem="qNQ-el-2EE" secondAttribute="trailing" constant="5" id="E4O-ym-a39"/>
+                <constraint firstItem="6q7-Bx-EVf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KQK-pI-C97"/>
+                <constraint firstItem="g2z-2D-EwP" firstAttribute="top" secondItem="6q7-Bx-EVf" secondAttribute="bottom" constant="5" id="oim-TC-04h"/>
+                <constraint firstItem="qNQ-el-2EE" firstAttribute="top" secondItem="6q7-Bx-EVf" secondAttribute="bottom" constant="5" id="tbS-9L-Zae"/>
+                <constraint firstItem="6q7-Bx-EVf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uEh-wM-82b"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g2z-2D-EwP" secondAttribute="trailing" constant="5" id="xES-84-siz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qNQ-el-2EE" secondAttribute="bottom" constant="5" id="yIl-M7-1iq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="120.98950524737631"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="YY3-Kh-Olh">
+            <connections>
+                <action selector="panGesture:" destination="-1" id="xVJ-ug-1vo"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+</document>
